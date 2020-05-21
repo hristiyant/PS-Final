@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace UserLogin
 {
@@ -10,6 +6,12 @@ namespace UserLogin
     {
         static void Main(string[] args)
         {
+            User testUser = new User("Admin Admin", "qwe123","10101010", 0);
+
+            if (LoginValidation.ValidateUserInput())
+            {
+                Console.WriteLine(testUser.Username);
+            }
         }
     }
 }
