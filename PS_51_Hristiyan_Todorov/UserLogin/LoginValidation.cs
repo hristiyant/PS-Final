@@ -8,8 +8,10 @@ namespace UserLogin
 {
     class LoginValidation
     {
+        public static UserRoles currentUserRole { get; private set; }
         public static bool ValidateUserInput()
         {
+            currentUserRole = UserRoles.ADMIN;
             return true;
         }
     }

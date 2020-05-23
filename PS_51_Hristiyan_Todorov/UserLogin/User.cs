@@ -4,11 +4,6 @@ namespace UserLogin
 {
     class User
     {
-        /*private String Username;
-        private String Password;
-        private String FakNum;
-        private Int32 Role;*/
-
         public string Username { get; set; }
         public string Password { get; set; }
         public string FakNum { get; set; }

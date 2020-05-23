@@ -6,11 +6,10 @@ namespace UserLogin
     {
         static void Main(string[] args)
         {
-            User testUser = new User("Admin Admin", "qwe123","10101010", 0);
-
             if (LoginValidation.ValidateUserInput())
             {
-                Console.WriteLine(testUser.Username);
+                Console.WriteLine("Name: " + UserData.TestUser.Username);
+                Console.WriteLine("Role: " + LoginValidation.currentUserRole);
             }
         }
     }
