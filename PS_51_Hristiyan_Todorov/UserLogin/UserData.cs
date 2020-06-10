@@ -8,9 +8,9 @@ namespace UserLogin
 {
     static class UserData
     {
-        private static User[] _testUsers;
+        private static List<User> _testUsers;
 
-        public static User[] TestUsers
+        public static List<User> TestUsers
         {
             get 
             {
@@ -24,11 +24,25 @@ namespace UserLogin
         {
             if(_testUsers == null)
             {
-                _testUsers = new User[3];
-                _testUsers[0] = new User("Test Admin", "testadmin", null, 1, DateTime.Today, DateTime.MaxValue);
-                _testUsers[1] = new User("Student One", "studentone", "10101010", 4, DateTime.Today, DateTime.MaxValue);
-                _testUsers[2] = new User("Student Two", "qwe123", "10101011", 4, DateTime.Today, DateTime.MaxValue);
+                _testUsers = new List<User>(3);
+                _testUsers.Add(new User("Test Admin", "testadmin", null, 2, DateTime.Today, DateTime.MaxValue));
+                _testUsers.Add(new User("Student One", "studentone", "10101010", 5, DateTime.Today, DateTime.MaxValue));
+                _testUsers.Add(new User("Student Two", "qwe123", "10101011", 5, DateTime.Today, DateTime.MaxValue));
             }
+        }
+
+        //Checks if a user with the specified name currently exists in the db.
+        public static bool IsUserExisting(string name)
+        {
+            foreach(User user in TestUsers)
+            {
+                if(user.Username.Equals(name))
+                {
+                    return true;
+                }
+            }
+
+            return false;
         }
 
         public static User IsUserPassCorrect(string username, string password)
@@ -63,12 +77,37 @@ namespace UserLogin
         {
             foreach(User user in TestUsers)
             {
-                if (username.Equals(username))
+                if (user.Username.Equals(username))
                 {
+                    string oldValue = UserRolesExtensions.ToFriendlyString((UserRoles)user.Role);
                     user.Role = (int)newRole;
+                    string newValue = UserRolesExtensions.ToFriendlyString((UserRoles)user.Role);
+                    Logger.LogActivity("Промяна на роля на " + username);
+                    Console.WriteLine("Успешно сменихте ролята от " + oldValue + " на " + newValue + ".");
                     break;
                 }
             }
+        }
+
+        public static void AssignUserActiveTo(string username, DateTime activeUntil)
+        {
+            foreach (User user in TestUsers)
+            {
+                if (user.Username.Equals(username))
+                {
+                    string oldValue = user.ActiveUntil.ToString();
+                    user.ActiveUntil = activeUntil;
+                    string newValue = user.ActiveUntil.ToString();
+                    Logger.LogActivity("Промяна на активност на " + username);
+                    Console.WriteLine("Успешно сменихте активност от " + oldValue + " на " + newValue + ".");
+                    break;
+                }
+            }
+        }
+
+        public static void PrintAllUsersList()
+        {
+
         }
     }
 }
