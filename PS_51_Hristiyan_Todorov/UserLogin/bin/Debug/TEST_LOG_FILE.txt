@@ -1,0 +1,10 @@
+6/10/2020 1:56:33 PM;Test Admin;2;Успешен Login
+
+6/10/2020 1:58:44 PM;Test Admin;2;Успешен Login
+6/10/2020 1:58:58 PM;Test Admin;2;Промяна на активност на Student One
+6/10/2020 2:00:55 PM; Test Admin; 2; Успешен Login
+6/10/2020 2:01:08 PM; Test Admin; 2; Промяна на активност на Student One
+6/10/2020 2:11:37 PM; Test Admin; 2; Успешен Login
+6/10/2020 2:27:27 PM; Test Admin; 2; Успешен Login
+6/10/2020 2:27:52 PM; Test Admin; 2; Успешен Login
+6/10/2020 2:30:40 PM; Test Admin; ADMIN; Успешен Login

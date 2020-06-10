@@ -61,6 +61,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Logger.cs" />
     <Compile Include="UserData.cs" />
     <Compile Include="UserRoles.cs" />
     <Compile Include="LoginValidation.cs" />
