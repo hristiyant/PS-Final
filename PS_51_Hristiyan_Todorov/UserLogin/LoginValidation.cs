@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace UserLogin
 {
-    class LoginValidation
+    public class LoginValidation
     {
         public static User LoggedUser;
         public delegate void ActionOnError(string ErrorMessage);
@@ -26,7 +26,7 @@ namespace UserLogin
         {
             Boolean emptyUserName;
             emptyUserName = user.Username.Equals(String.Empty);
-            if (emptyUserName || user.Username.Length < 5) 
+            if (emptyUserName || user.Username.Length < 5)
             {
                 //ErrorMessage = "Не е посочено валидно потребителско име.";
                 _actionOnError("Не е посочено валидно потребителско име.");
@@ -36,7 +36,7 @@ namespace UserLogin
 
             Boolean emptyPassword;
             emptyPassword = user.Password.Equals(String.Empty);
-            if(emptyPassword || user.Password.Length < 5)
+            if (emptyPassword || user.Password.Length < 5)
             {
                 //ErrorMessage = "Не е посочена валидна парола.";
                 _actionOnError("Не е посочена валидна парола.");
@@ -45,7 +45,7 @@ namespace UserLogin
             }
 
             LoggedUser = UserData.IsUserPassCorrect(user.Username, user.Password);
-            if(LoggedUser == null)
+            if (LoggedUser == null)
             {
                 //ErrorMessage = "Не е намерен потребител с посочените потребителско име и парола.";
                 _actionOnError("Не е намерен потребител с посочените потребителско име и парола.");
