@@ -18,7 +18,7 @@ namespace StudentInfoSystem
                 {
                     _testStudents = new List<Student>
                     {
-                        new Student("Hrisko","Drisko", "12121212")
+                        //new Student("Hrisko","Drisko", "12121212")
                     };
                 }
 
