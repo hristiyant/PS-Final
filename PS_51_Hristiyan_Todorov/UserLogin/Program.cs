@@ -102,6 +102,7 @@ namespace UserLogin
                         Logger.GetCurrentSessionActivities();
                         break;
                 }
+                
             }
             catch (IOException e)
             {

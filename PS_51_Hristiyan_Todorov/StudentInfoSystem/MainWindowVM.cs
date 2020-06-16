@@ -10,17 +10,17 @@ namespace StudentInfoSystem
     public class MainWindowVM : DependencyObject, INotifyPropertyChanged
     {
         public Student currentStudent;
-        private ObservableCollection<Student> _BackingProperty;
+        private Student _BackingProperty;
         public event PropertyChangedEventHandler PropertyChanged;
 
         public MainWindowVM()
         {
             StudentModel model = new StudentModel();
-            BoundProperty = model.GetData();
-            currentStudent = model.GetData()[0];
+            /*BoundProperty = model.GetTestStudent();*/
+            currentStudent = model.GetTestStudent();
         }
 
-        public ObservableCollection<Student> BoundProperty
+        public Student BoundProperty
         {
             get { return _BackingProperty; }
             set { _BackingProperty = value; PropChanged("BoundProperty"); }
@@ -41,7 +41,7 @@ namespace StudentInfoSystem
                 return currentStudent;
             }
         }
-        public string TxtFirstNameContent
+        /*public string TxtFirstNameContent
         {
             get
             {
@@ -114,6 +114,6 @@ namespace StudentInfoSystem
             }
         }
         
-        //Group
+        //Group*/
     }
 }

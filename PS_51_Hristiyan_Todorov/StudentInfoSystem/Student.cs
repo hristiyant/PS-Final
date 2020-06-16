@@ -1,34 +1,26 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace StudentInfoSystem
+﻿namespace StudentInfoSystem
 {
-    public class Student
+    public class Student//:INotifyPropertyChanged
     {
-        public string FirstName;
-        public string SecondName;
-        public string LastName;
-        public string Faculty;
-        public string CourseName;
-        public string Degree;
-        public string Status;
-        public string FacultyNumber;
-        public string Year;
-        public string Stream;
-        public string Group;
+        public string FirstName { get; set; }
+        public string SecondName { get; set; }
+        public string LastName { get; set; }
+        public string Faculty { get; set; }
+        public string CourseName { get; set; }
+        public string Degree { get; set; }
+        public string Status { get; set; }
+        public string FacultyNumber { get; set; }
+        public string Year { get; set; }
+        public string Stream { get; set; }
+        public string Group { get; set; }
 
-        public Student(string firstName, string lastName, string facultyNumber)
+        //public event PropertyChangedEventHandler PropertyChanged;
+
+        public Student(string firstName, string secondName, string lastName, string faculty, string courseName, string degree, string status, string facultyNumber, string year, string stream, string group)
         {
             FirstName = firstName;
+            SecondName = secondName;
             LastName = lastName;
-            FacultyNumber = facultyNumber;
-        }
-
-        public Student(string firstName, string secondName, string lastName, string faculty, string courseName, string degree, string status, string facultyNumber, string year, string stream, string group) : this(firstName, secondName, lastName)
-        {
             Faculty = faculty;
             CourseName = courseName;
             Degree = degree;
@@ -38,5 +30,22 @@ namespace StudentInfoSystem
             Stream = stream;
             Group = group;
         }
+
+        /*public string SecondName
+        {
+            get
+            {
+                return _secondName;
+            }
+
+            set
+            {
+                if (value == _secondName)
+                    return;
+
+                _secondName = value;
+                OnPropertyChanged(() => SecondName);
+            }
+        }*/
     }
 }
