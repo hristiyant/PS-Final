@@ -17,18 +17,17 @@ namespace StudentInfoSystem
 
         private void btnActivity_Click(object sender, RoutedEventArgs e)
         {
-            //MainGrid.IsEnabled = false;
-            //ClearAllContent();
             PrintStudentInfo(null);
         }
 
         private void SetCurrent(Student student)
         {
-            if(student != null)
+            if (student != null)
             {
                 EnableAllControls();
                 PrintStudentInfo(student);
-            } else
+            }
+            else
             {
                 ClearAllContent();
                 DisableAllControls();

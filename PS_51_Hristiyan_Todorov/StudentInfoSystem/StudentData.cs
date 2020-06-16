@@ -1,11 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
 namespace StudentInfoSystem
 {
+    //Not Used
     static class StudentData
     {
         private static List<Student> _testStudents;
@@ -18,7 +15,7 @@ namespace StudentInfoSystem
                 {
                     _testStudents = new List<Student>
                     {
-                        //new Student("Hrisko","Drisko", "12121212")
+                        //new Student()
                     };
                 }
 

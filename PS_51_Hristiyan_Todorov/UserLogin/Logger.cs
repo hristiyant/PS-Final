@@ -1,9 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace UserLogin
 {
@@ -42,11 +40,10 @@ namespace UserLogin
             }
             catch (FileNotFoundException e)
             {
-                /*if (e.Source != null)
+                if (e.Source != null)
                 {
                     Console.WriteLine("IOException source: {0}", e.Source);
-                }*/
-                Console.WriteLine("Посоченият файл не съществува.");
+                }
             }
         }
 

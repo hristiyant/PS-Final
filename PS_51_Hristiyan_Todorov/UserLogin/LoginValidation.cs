@@ -54,7 +54,7 @@ namespace UserLogin
             }
 
             CurrentUserRole = (UserRoles)LoggedUser.Role;
-            Logger.Hristiyan.PS.Logger.LogActivity("Успешен Login");
+            Logger.LogActivity("Успешен Login");
 
             return true;
         }
