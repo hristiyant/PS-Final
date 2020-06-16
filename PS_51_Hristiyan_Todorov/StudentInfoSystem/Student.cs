@@ -2,6 +2,7 @@
 {
     public class Student//:INotifyPropertyChanged
     {
+        public int StudentId { get; set; }
         public string FirstName { get; set; }
         public string SecondName { get; set; }
         public string LastName { get; set; }
