@@ -103,6 +103,7 @@
                     <RowDefinition></RowDefinition>
                     <RowDefinition></RowDefinition>
                     <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
                 </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition
@@ -237,6 +238,12 @@
                     Content="Activity"
                     Name="btnActivity"
                     Click="btnActivity_Click"></Button>
+                <ListBox
+                    Height="50"
+                    Grid.Column="0"
+                    Grid.Row="5"
+                    ItemsSource="{Binding StudStatusChoices}">
+                </ListBox>
             </Grid>
         </GroupBox>
     </Grid>
