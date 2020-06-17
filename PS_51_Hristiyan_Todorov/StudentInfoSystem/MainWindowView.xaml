@@ -250,7 +250,8 @@
                     Grid.Row="5"
                     Content="Go To Second Window"
                     x:Name="btnOpenSecondWindow"
-                    HoverBackground="RoyalBlue"></SIS:CustomButton>
+                    HoverBackground="RoyalBlue"
+                    Click="btnOpenSecondWindow_Click"></SIS:CustomButton>
             </Grid>
         </GroupBox>
     </Grid>

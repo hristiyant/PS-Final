@@ -23,7 +23,7 @@ namespace StudentInfoSystem
             PrintStudentInfo(null);
         }
 
-        private void btnOpenSeconvWindow_Click(object sender, RoutedEventArgs e)
+        private void btnOpenSecondWindow_Click(object sender, RoutedEventArgs e)
         {
             Window2 w = new Window2();
             w.Show();
