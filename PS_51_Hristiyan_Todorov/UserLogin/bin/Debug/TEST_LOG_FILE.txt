@@ -21,3 +21,5 @@
 6/17/2020 3:55:26 AM; Test Admin; ADMIN; Промяна на активност на Student One
 6/17/2020 3:59:23 AM; Test Admin; ADMIN; Успешен Login
 6/17/2020 3:59:38 AM; Test Admin; ADMIN; Промяна на активност на Student Two
+6/18/2020 1:22:54 AM; Test Admin; ADMIN; Успешен Login
+6/18/2020 1:22:54 AM: Успешен логин на Test Admin
