@@ -55,6 +55,7 @@ namespace UserLogin
 
             CurrentUserRole = (UserRoles)LoggedUser.Role;
             Logger.LogActivity("Успешен Login");
+            MyCustomLogger.Logger.LogActivity("Успешен логин на " + user.Username);
 
             return true;
         }

@@ -79,6 +79,7 @@ namespace UserLogin
             loggerContext.Logs.Add(new Logs("Промяна на роля на " + username));
             loggerContext.SaveChanges();
             Logger.LogActivity("Промяна на роля на " + username);
+            MyCustomLogger.Logger.LogActivity("Промяна на роля на " + username);
 
             /*Old implementation:
             foreach (User user in TestUsers)
@@ -112,6 +113,7 @@ namespace UserLogin
             loggerContext.Logs.Add(new Logs("Промяна на активност на " + username));
             loggerContext.SaveChanges();
             Logger.LogActivity("Промяна на активност на " + username);
+            MyCustomLogger.Logger.LogActivity("Промяна на активност на " + username);
 
             /*Old implementation:
             foreach (User user in TestUsers)
