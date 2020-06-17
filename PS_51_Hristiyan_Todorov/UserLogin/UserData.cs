@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace UserLogin
 {
@@ -12,7 +10,7 @@ namespace UserLogin
 
         public static List<User> TestUsers
         {
-            get 
+            get
             {
                 ResetTestUsersData();
                 return _testUsers;
@@ -22,7 +20,7 @@ namespace UserLogin
 
         private static void ResetTestUsersData()
         {
-            if(_testUsers == null)
+            if (_testUsers == null)
             {
                 _testUsers = new List<User>(3);
                 _testUsers.Add(new User("Test Admin", "testadmin", null, 2, DateTime.Today, DateTime.MaxValue));
@@ -31,12 +29,13 @@ namespace UserLogin
             }
         }
 
-        //Checks if a user with the specified name currently exists in the db.
+        //Not used.
+        //Checks if a user with the specified name currently exists.
         public static bool IsUserExisting(string name)
         {
-            foreach(User user in TestUsers)
+            foreach (User user in TestUsers)
             {
-                if(user.Username.Equals(name))
+                if (user.Username.Equals(name))
                 {
                     return true;
                 }
@@ -47,35 +46,42 @@ namespace UserLogin
 
         public static User IsUserPassCorrect(string username, string password)
         {
-            foreach(User user in TestUsers)
+            UserContext context = new UserContext();
+
+            User result = (
+                from user in context.Users
+                where (user.Username.Equals(username) && user.Password.Equals(password))
+                select user
+                ).First();
+
+            if (username.Length >= 5 && password.Length >= 5)
             {
-                if(user.Username.Equals(username) && user.Password.Equals(password))
-                {
-                    if(username.Length >= 5 && password.Length >= 5)
-                    {
-                        return user;
-                    }
-                }
+                return result;
             }
 
             return null;
         }
 
-        public static void SetUserActiveTo(string username, DateTime newDate)
-        {
-            foreach(User user in TestUsers)
-            {
-                if (user.Username.Equals(username))
-                {
-                    user.ActiveUntil = newDate;
-                    break;
-                }
-            }
-        }
-
         public static void AssignUserRole(string username, UserRoles newRole)
         {
-            foreach(User user in TestUsers)
+            UserContext userContext = new UserContext();
+            LoggerContext loggerContext = new LoggerContext();
+
+            User user = (
+                from u in userContext.Users
+                where u.Username.Equals(username)
+                select u
+                ).First();
+
+            user.Role = (int)newRole;
+            userContext.SaveChanges();
+
+            loggerContext.Logs.Add(new Logs("Промяна на роля на " + username));
+            loggerContext.SaveChanges();
+            Logger.LogActivity("Промяна на роля на " + username);
+
+            /*Old implementation:
+            foreach (User user in TestUsers)
             {
                 if (user.Username.Equals(username))
                 {
@@ -86,11 +92,28 @@ namespace UserLogin
                     Console.WriteLine("Успешно сменихте ролята от " + oldValue + " на " + newValue + ".");
                     break;
                 }
-            }
+            }*/
         }
 
-        public static void AssignUserActiveTo(string username, DateTime activeUntil)
+        public static void AssignUserActiveTo(string username, DateTime newDate)
         {
+            UserContext userContext = new UserContext();
+            LoggerContext loggerContext = new LoggerContext();
+
+            User user = (
+                from u in userContext.Users
+                where u.Username.Equals(username)
+                select u
+                ).First();
+
+            user.ActiveUntil = newDate;
+            userContext.SaveChanges();
+
+            loggerContext.Logs.Add(new Logs("Промяна на активност на " + username));
+            loggerContext.SaveChanges();
+            Logger.LogActivity("Промяна на активност на " + username);
+
+            /*Old implementation:
             foreach (User user in TestUsers)
             {
                 if (user.Username.Equals(username))
@@ -102,7 +125,7 @@ namespace UserLogin
                     Console.WriteLine("Успешно сменихте активност от " + oldValue + " на " + newValue + ".");
                     break;
                 }
-            }
+            }*/
         }
 
         public static void PrintAllUsersList()

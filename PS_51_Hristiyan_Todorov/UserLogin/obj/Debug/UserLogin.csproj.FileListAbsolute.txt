@@ -4,3 +4,9 @@ C:\Users\htodorov\Documents\Drisko\University\ПС\Final Project\Solution\PS_51_
 C:\Users\htodorov\Documents\Drisko\University\ПС\Final Project\Solution\PS_51_Hristiyan_Todorov\UserLogin\obj\Debug\UserLogin.csproj.CoreCompileInputs.cache
 C:\Users\htodorov\Documents\Drisko\University\ПС\Final Project\Solution\PS_51_Hristiyan_Todorov\UserLogin\obj\Debug\UserLogin.exe
 C:\Users\htodorov\Documents\Drisko\University\ПС\Final Project\Solution\PS_51_Hristiyan_Todorov\UserLogin\obj\Debug\UserLogin.pdb
+C:\Users\htodorov\Documents\Drisko\University\ПС\Final Project\Solution\PS_51_Hristiyan_Todorov\UserLogin\obj\Debug\UserLogin.csprojAssemblyReference.cache
+C:\Users\htodorov\Documents\Drisko\University\ПС\Final Project\Solution\PS_51_Hristiyan_Todorov\UserLogin\bin\Debug\EntityFramework.dll
+C:\Users\htodorov\Documents\Drisko\University\ПС\Final Project\Solution\PS_51_Hristiyan_Todorov\UserLogin\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\htodorov\Documents\Drisko\University\ПС\Final Project\Solution\PS_51_Hristiyan_Todorov\UserLogin\bin\Debug\EntityFramework.xml
+C:\Users\htodorov\Documents\Drisko\University\ПС\Final Project\Solution\PS_51_Hristiyan_Todorov\UserLogin\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\htodorov\Documents\Drisko\University\ПС\Final Project\Solution\PS_51_Hristiyan_Todorov\UserLogin\obj\Debug\UserLogin.csproj.CopyComplete
