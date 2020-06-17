@@ -1,5 +1,7 @@
-﻿using System.Windows;
+﻿using StudentInfoSystem.View;
+using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Forms;
 
 namespace StudentInfoSystem
 {
@@ -19,6 +21,12 @@ namespace StudentInfoSystem
         private void btnActivity_Click(object sender, RoutedEventArgs e)
         {
             PrintStudentInfo(null);
+        }
+
+        private void btnOpenSeconvWindow_Click(object sender, RoutedEventArgs e)
+        {
+            Window2 w = new Window2();
+            w.Show();
         }
 
         private void SetCurrent(Student student)
@@ -55,9 +63,9 @@ namespace StudentInfoSystem
         {
             foreach (var item in grid.Children)
             {
-                if (item.GetType() == typeof(TextBox))
+                if (item.GetType() == typeof(System.Windows.Controls.TextBox))
                 {
-                    ((TextBox)item).Clear();
+                    ((System.Windows.Controls.TextBox)item).Clear();
                 }
             }
         }
@@ -75,6 +83,17 @@ namespace StudentInfoSystem
             txtYear.Text = student.Year;
             txtStream.Text = student.Stream;
             txtGroup.Text = student.Group;
+        }
+
+        private void StudentInfoMainWindow_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            if(System.Windows.Forms.MessageBox.Show("Are you sure you want to exit the application?", "Confirm", MessageBoxButtons.YesNo,MessageBoxIcon.Question) == System.Windows.Forms.DialogResult.No)
+            {
+                e.Cancel = true;
+            } else
+            {
+                System.Windows.Forms.Application.Exit();
+            }
         }
     }
 }
