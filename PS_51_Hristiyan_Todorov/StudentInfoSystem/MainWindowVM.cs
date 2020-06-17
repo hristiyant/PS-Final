@@ -20,7 +20,7 @@ namespace StudentInfoSystem
             StudentModel model = new StudentModel();
             StudentContent = model.GetTestStudent();
             FillStudStatusChoices();
-            MessageBox.Show(TestStudentsIfEmpty().ToString());
+            //MessageBox.Show(TestStudentsIfEmpty().ToString());
             if (TestStudentsIfEmpty())
             {
                 CopyTestStudents();
