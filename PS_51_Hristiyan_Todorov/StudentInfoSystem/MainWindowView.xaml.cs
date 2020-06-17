@@ -8,10 +8,11 @@ namespace StudentInfoSystem
     /// </summary>
     public partial class MainWindowView : Window
     {
+        MainWindowVM vm;
         public MainWindowView()
         {
             InitializeComponent();
-            MainWindowVM vm = new MainWindowVM();
+            vm = new MainWindowVM();
             this.DataContext = vm;
         }
 

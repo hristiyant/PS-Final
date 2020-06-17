@@ -12,6 +12,11 @@ namespace UserLogin
         public DateTime Created { get; set; }
         public DateTime? ActiveUntil { get; set; }
 
+        public User()
+        {
+
+        }
+
         public User(string username, string password, string fakNum, int role, DateTime created, DateTime activeUntil)
         {
             Username = username;

@@ -11,6 +11,9 @@ namespace UserLogin
             //Set Console's Encoding to support cyrillic symbols.
             Console.OutputEncoding = Encoding.UTF8;
 
+            /*Only called once to fill db
+            CopyTestUsers();*/
+
             Console.WriteLine("Въведете потребителско име: ");
             string Username = Console.ReadLine();
             Console.WriteLine("Въведете парола: ");
@@ -156,6 +159,16 @@ namespace UserLogin
             string newActiveUntilValue = Console.ReadLine();
 
             UserData.AssignUserActiveTo(name, DateTime.Parse(newActiveUntilValue));
+        }
+
+        private static void CopyTestUsers()
+        {
+            UserContext context = new UserContext();
+            foreach(User user in UserData.TestUsers)
+            {
+                context.Users.Add(user);
+                context.SaveChanges();
+            }
         }
     }
 }
