@@ -23,3 +23,29 @@
 6/17/2020 3:59:38 AM; Test Admin; ADMIN; Промяна на активност на Student Two
 6/18/2020 1:22:54 AM; Test Admin; ADMIN; Успешен Login
 6/18/2020 1:22:54 AM: Успешен логин на Test Admin
+6/18/2020 1:45:22 PM; Test Admin; ADMIN; Успешен Login
+6/18/2020 1:45:22 PM: Успешен логин на Test Admin
+6/18/2020 1:51:46 PM; Test Admin; ADMIN; *Logger class* Успешен Login
+6/18/2020 1:51:46 PM: *MyCustomLogger* Успешен логин на Test Admin
+6/18/2020 1:53:54 PM; Test Admin; ADMIN; *Logger class* Успешен Login
+6/18/2020 1:53:54 PM: *MyCustomLogger* Успешен логин на Test Admin
+6/18/2020 1:59:04 PM; Test Admin; ADMIN; *Logger class* Успешен Login
+6/18/2020 1:59:04 PM: *MyCustomLogger* Успешен логин на Test Admin
+6/18/2020 1:59:28 PM; Test Admin; ADMIN; Промяна на роля на Student One
+6/18/2020 1:59:28 PM: Промяна на роля на Student One
+6/18/2020 2:06:23 PM; Test Admin; ADMIN; *Logger class* Успешен Login
+6/18/2020 2:06:23 PM: *MyCustomLogger* Успешен логин на Test Admin
+6/18/2020 2:06:40 PM; Test Admin; ADMIN; Промяна на роля на Student One
+6/18/2020 2:06:40 PM: Промяна на роля на Student One
+6/18/2020 2:09:38 PM; Test Admin; ADMIN; *Logger class* Успешен Login
+6/18/2020 2:09:38 PM: *MyCustomLogger* Успешен логин на Test Admin
+6/18/2020 2:10:02 PM; Test Admin; ADMIN; Промяна на роля на Student One
+6/18/2020 2:10:02 PM: Промяна на роля на Student One
+6/18/2020 2:11:55 PM; Test Admin; ADMIN; *Logger class* Успешен Login
+6/18/2020 2:11:55 PM: *MyCustomLogger* Успешен логин на Test Admin
+6/18/2020 2:12:17 PM; Test Admin; ADMIN; Промяна на роля на Student One
+6/18/2020 2:12:17 PM: Промяна на роля на Student One
+6/18/2020 2:18:51 PM; Test Admin; ADMIN; *Logger class* Успешен Login
+6/18/2020 2:18:51 PM: *MyCustomLogger* Успешен логин на Test Admin
+6/18/2020 2:19:05 PM; Test Admin; ADMIN; Промяна на роля на Student One
+6/18/2020 2:19:05 PM: Промяна на роля на Student One

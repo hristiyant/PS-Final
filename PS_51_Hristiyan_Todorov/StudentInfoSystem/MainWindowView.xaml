@@ -313,7 +313,7 @@
                     Grid.Row="0"
                     Content="Go To Second Window"
                     x:Name="btnOpenSecondWindow"
-                    HoverBackground="RoyalBlue"
+                    HoverBackground="Red"
                     Click="btnOpenSecondWindow_Click"></SIS:CustomButtonView>
             </Grid>
         </GroupBox>
