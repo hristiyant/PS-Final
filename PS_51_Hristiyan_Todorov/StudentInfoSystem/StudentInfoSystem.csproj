@@ -70,11 +70,11 @@
     <Compile Include="StudentInfoContext.cs" />
     <Compile Include="StudentModel.cs" />
     <Compile Include="MainWindowVM.cs" />
-    <Compile Include="View\CustomButton.xaml.cs">
-      <DependentUpon>CustomButton.xaml</DependentUpon>
+    <Compile Include="View\CustomButtonView.xaml.cs">
+      <DependentUpon>CustomButtonView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\Window2.xaml.cs">
-      <DependentUpon>Window2.xaml</DependentUpon>
+    <Compile Include="View\SecondWindowView.xaml.cs">
+      <DependentUpon>SecondWindowView.xaml</DependentUpon>
     </Compile>
     <Page Include="MainWindowView.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -91,11 +91,11 @@
       <DependentUpon>MainWindowView.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="View\CustomButton.xaml">
+    <Page Include="View\CustomButtonView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="View\Window2.xaml">
+    <Page Include="View\SecondWindowView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

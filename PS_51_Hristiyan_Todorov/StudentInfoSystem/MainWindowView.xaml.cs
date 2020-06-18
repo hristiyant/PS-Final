@@ -10,47 +10,51 @@ namespace StudentInfoSystem
     /// </summary>
     public partial class MainWindowView : Window
     {
-        MainWindowVM vm;
+        private MainWindowVM Vm { get; }
+
         public MainWindowView()
         {
             InitializeComponent();
-            vm = new MainWindowVM();
-            this.DataContext = vm;
+            Vm = new MainWindowVM();
+            this.DataContext = Vm;
         }
 
-        private void btnActivity_Click(object sender, RoutedEventArgs e)
+        private void btnFillInStudentInfo_Click(object sender, RoutedEventArgs e)
         {
-            PrintStudentInfo(null);
+            Vm.GetStudentInfo();
+        }
+
+        private void btnClearStudentInfo_Click(object sender, RoutedEventArgs e)
+        {
+            ClearAllContent();
         }
 
         private void btnOpenSecondWindow_Click(object sender, RoutedEventArgs e)
         {
-            Window2 w = new Window2();
-            w.Show();
+            Window2 w2 = new Window2();
+            w2.Show();
         }
 
-        private void SetCurrent(Student student)
+        private void btnEnableControls_Click(object sender, RoutedEventArgs e)
         {
-            if (student != null)
-            {
-                EnableAllControls();
-                PrintStudentInfo(student);
-            }
-            else
-            {
-                ClearAllContent();
-                DisableAllControls();
-            }
+            EnableAllControls();
         }
 
-        private void DisableAllControls()
+        private void btnDisableControls_Click(object sender, RoutedEventArgs e)
         {
-            gridMain.IsEnabled = false;
+            DisableAllControls();
         }
 
         private void EnableAllControls()
         {
-            gridMain.IsEnabled = true;
+            gridPersonalInfo.IsEnabled = true;
+            gridStudentInfo.IsEnabled = true;
+        }
+
+        private void DisableAllControls()
+        {
+            gridPersonalInfo.IsEnabled = false;
+            gridStudentInfo.IsEnabled = false;
         }
 
         private void ClearAllContent()
@@ -68,21 +72,6 @@ namespace StudentInfoSystem
                     ((System.Windows.Controls.TextBox)item).Clear();
                 }
             }
-        }
-
-        private void PrintStudentInfo(Student student)
-        {
-            txtFirstName.Text = student.FirstName;
-            txtSecondName.Text = student.SecondName;
-            txtLastName.Text = student.LastName;
-            txtFaculty.Text = student.Faculty;
-            txtCourseName.Text = student.CourseName;
-            txtDegree.Text = student.Degree;
-            txtStatus.Text = student.Status;
-            txtFakNum.Text = student.FacultyNumber;
-            txtYear.Text = student.Year;
-            txtStream.Text = student.Stream;
-            txtGroup.Text = student.Group;
         }
 
         private void StudentInfoMainWindow_Closing(object sender, System.ComponentModel.CancelEventArgs e)

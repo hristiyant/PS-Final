@@ -10,7 +10,7 @@
     mc:Ignorable="d"
     Name="StudentInfoMainWindow"
     Title="Студентска информационна система"
-    Height="550"
+    Height="600"
     Width="800"
     Closing="StudentInfoMainWindow_Closing">
     <Window.DataContext>
@@ -20,9 +20,11 @@
         Name="gridMain">
         <Grid.RowDefinitions>
             <RowDefinition
-                Height="170"></RowDefinition>
+                Height="180"></RowDefinition>
             <RowDefinition
-                Height="280"></RowDefinition>
+                Height="250"></RowDefinition>
+            <RowDefinition
+                Height="100"></RowDefinition>
         </Grid.RowDefinitions>
         <GroupBox
             Grid.Row="0"
@@ -35,9 +37,14 @@
                 Name="gridPersonalInfo"
                 Margin="10">
                 <Grid.RowDefinitions>
-                    <RowDefinition></RowDefinition>
-                    <RowDefinition></RowDefinition>
-                    <RowDefinition></RowDefinition>
+                    <RowDefinition
+                        MaxHeight="25"></RowDefinition>
+                    <RowDefinition
+                        MaxHeight="25"></RowDefinition>
+                    <RowDefinition
+                        MaxHeight="25"></RowDefinition>
+                    <RowDefinition
+                        MaxHeight="25"></RowDefinition>
                 </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition
@@ -55,6 +62,7 @@
                     x:Name="tbFirstName"
                     Text="Име:"></TextBlock>
                 <TextBox
+                    FontSize="12"
                     VerticalAlignment="Center"
                     Grid.Column="1"
                     Grid.Row="0"
@@ -68,6 +76,7 @@
                     x:Name="tbSecondName"
                     Text="Презиме:"></TextBlock>
                 <TextBox
+                    FontSize="12"
                     VerticalAlignment="Center"
                     Grid.Column="1"
                     Grid.Row="1"
@@ -81,12 +90,21 @@
                     x:Name="tbLastName"
                     Text="Фамилия:"></TextBlock>
                 <TextBox
+                    FontSize="12"
                     VerticalAlignment="Center"
                     Grid.Column="1"
                     Grid.Row="2"
                     Name="txtLastName"
                     Text="{Binding StudentContent.LastName}"
                     Height="20"></TextBox>
+                <ListBox
+                    VerticalAlignment="Top"
+                    HorizontalAlignment="Center"
+                    Margin="10"
+                    Height="80"
+                    Grid.Column="2"
+                    Grid.RowSpan="4"
+                    ItemsSource="{Binding StudStatusChoices}"></ListBox>
             </Grid>
         </GroupBox>
         <GroupBox
@@ -94,18 +112,22 @@
             FontSize="15"
             x:Name="studentInfo"
             Header="Студентска информация"
-            Height="250"
+            Height="200"
             Margin="10">
             <Grid
                 Name="gridStudentInfo"
                 Margin="10">
                 <Grid.RowDefinitions>
-                    <RowDefinition></RowDefinition>
-                    <RowDefinition></RowDefinition>
-                    <RowDefinition></RowDefinition>
-                    <RowDefinition></RowDefinition>
-                    <RowDefinition></RowDefinition>
-                    <RowDefinition></RowDefinition>
+                    <RowDefinition
+                        MaxHeight="25"></RowDefinition>
+                    <RowDefinition
+                        MaxHeight="25"></RowDefinition>
+                    <RowDefinition
+                        MaxHeight="25"></RowDefinition>
+                    <RowDefinition
+                        MaxHeight="25"></RowDefinition>
+                    <RowDefinition
+                        MaxHeight="25"></RowDefinition>
                 </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition
@@ -125,6 +147,7 @@
                     x:Name="tbFaculty"
                     Text="Факултет:"></TextBlock>
                 <TextBox
+                    FontSize="12"
                     VerticalAlignment="Center"
                     Grid.Column="1"
                     Grid.Row="0"
@@ -138,6 +161,7 @@
                     x:Name="tbCourseName"
                     Text="Специалност:"></TextBlock>
                 <TextBox
+                    FontSize="12"
                     VerticalAlignment="Center"
                     Grid.Column="1"
                     Grid.Row="1"
@@ -151,6 +175,7 @@
                     x:Name="tbDegree"
                     Text="ОКС:"></TextBlock>
                 <TextBox
+                    FontSize="12"
                     VerticalAlignment="Center"
                     Grid.Column="1"
                     Grid.Row="2"
@@ -164,6 +189,7 @@
                     x:Name="tbStatus"
                     Text="Статус:"></TextBlock>
                 <TextBox
+                    FontSize="12"
                     VerticalAlignment="Center"
                     Grid.Column="1"
                     Grid.Row="3"
@@ -177,6 +203,7 @@
                     x:Name="tbFakNum"
                     Text="Фак. номер:"></TextBlock>
                 <TextBox
+                    FontSize="12"
                     VerticalAlignment="Center"
                     Grid.Column="1"
                     Grid.Row="4"
@@ -184,14 +211,15 @@
                     Text="{Binding StudentContent.FacultyNumber}"
                     Height="20"></TextBox>
                 <TextBlock
+                    Margin="2"
                     VerticalAlignment="Center"
                     Grid.Column="2"
                     Grid.Row="0"
                     x:Name="tbYear"
-                    HorizontalAlignment="Right"
-                    Margin="10"
+                    HorizontalAlignment="center"
                     Text="Курс:"></TextBlock>
                 <TextBox
+                    FontSize="12"
                     VerticalAlignment="Center"
                     Grid.Column="3"
                     Grid.Row="0"
@@ -205,10 +233,10 @@
                     Grid.Column="2"
                     Grid.Row="1"
                     x:Name="tbStream"
-                    HorizontalAlignment="Right"
-                    Margin="10"
+                    HorizontalAlignment="Center"
                     Text="Поток:"></TextBlock>
                 <TextBox
+                    FontSize="12"
                     VerticalAlignment="Center"
                     Grid.Column="3"
                     Grid.Row="1"
@@ -222,10 +250,10 @@
                     Grid.Column="2"
                     Grid.Row="2"
                     x:Name="tbGroup"
-                    HorizontalAlignment="Right"
-                    Margin="10"
+                    HorizontalAlignment="Center"
                     Text="Група:"></TextBlock>
                 <TextBox
+                    FontSize="12"
                     VerticalAlignment="Center"
                     Grid.Column="3"
                     Grid.Row="2"
@@ -234,24 +262,59 @@
                     HorizontalAlignment="Left"
                     Height="20"
                     Width="50"></TextBox>
+            </Grid>
+        </GroupBox>
+        <GroupBox
+            Grid.Row="2"
+            Header="Действия">
+            <Grid
+                Name="gridActions">
+                <Grid.RowDefinitions>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                </Grid.ColumnDefinitions>
                 <Button
-                    Grid.Column="3"
-                    Grid.Row="4"
-                    Content="Activity"
-                    Name="btnActivity"
-                    Click="btnActivity_Click"></Button>
-                <ListBox
-                    Height="50"
+                    Margin="5"
                     Grid.Column="0"
-                    Grid.Row="5"
-                    ItemsSource="{Binding StudStatusChoices}"></ListBox>
-                <SIS:CustomButton
+                    Grid.Row="0"
+                    Content="Fill In Student Info"
+                    Name="btnFillInStudentInfo"
+                    Click="btnFillInStudentInfo_Click"></Button>
+                <Button
+                    Margin="5"
+                    Grid.Column="0"
+                    Grid.Row="1"
+                    Content="Clear Student Info"
+                    Name="btnClearStudentInfo"
+                    Click="btnClearStudentInfo_Click"></Button>
+                <Button
+                    Margin="5"
+                    Grid.Column="1"
+                    Grid.Row="0"
+                    Content="Enable Controls"
+                    Name="btnEnableControls"
+                    Click="btnEnableControls_Click"></Button>
+                <Button
+                    Margin="5"
+                    Grid.Column="1"
+                    Grid.Row="1"
+                    Content="Disable Controls"
+                    Name="btnDisableControls"
+                    Click="btnDisableControls_Click"></Button>
+                <SIS:CustomButtonView
+                    Margin="5"
                     Grid.Column="3"
-                    Grid.Row="5"
+                    Grid.Row="0"
                     Content="Go To Second Window"
                     x:Name="btnOpenSecondWindow"
                     HoverBackground="RoyalBlue"
-                    Click="btnOpenSecondWindow_Click"></SIS:CustomButton>
+                    Click="btnOpenSecondWindow_Click"></SIS:CustomButtonView>
             </Grid>
         </GroupBox>
     </Grid>
