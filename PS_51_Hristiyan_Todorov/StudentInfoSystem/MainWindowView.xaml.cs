@@ -1,4 +1,5 @@
 ﻿using StudentInfoSystem.View;
+using StudentInfoSystem.ViewModel;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Forms;
@@ -31,7 +32,7 @@ namespace StudentInfoSystem
 
         private void btnOpenSecondWindow_Click(object sender, RoutedEventArgs e)
         {
-            Window2 w2 = new Window2();
+            SecondWindowView w2 = new SecondWindowView();
             w2.Show();
         }
 
