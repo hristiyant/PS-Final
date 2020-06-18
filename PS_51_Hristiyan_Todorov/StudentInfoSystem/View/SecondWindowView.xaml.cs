@@ -15,11 +15,11 @@ using System.Windows.Shapes;
 namespace StudentInfoSystem.View
 {
     /// <summary>
-    /// Interaction logic for Window2.xaml
+    /// Interaction logic for SecondWindowView.xaml
     /// </summary>
-    public partial class Window2 : Window
+    public partial class SecondWindowView : Window
     {
-        public Window2()
+        public SecondWindowView()
         {
             InitializeComponent();
         }

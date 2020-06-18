@@ -67,9 +67,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="StudentInfoContext.cs" />
-    <Compile Include="StudentModel.cs" />
-    <Compile Include="MainWindowVM.cs" />
+    <Compile Include="Model\StudentInfoContext.cs" />
+    <Compile Include="Model\StudentModel.cs" />
+    <Compile Include="ViewModel\MainWindowVM.cs" />
     <Compile Include="View\CustomButtonView.xaml.cs">
       <DependentUpon>CustomButtonView.xaml</DependentUpon>
     </Compile>
@@ -84,9 +84,9 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="StudentValidation.cs" />
-    <Compile Include="StudentData.cs" />
-    <Compile Include="Student.cs" />
+    <Compile Include="Model\StudentValidation.cs" />
+    <Compile Include="Model\StudentData.cs" />
+    <Compile Include="Model\Student.cs" />
     <Compile Include="MainWindowView.xaml.cs">
       <DependentUpon>MainWindowView.xaml</DependentUpon>
       <SubType>Code</SubType>

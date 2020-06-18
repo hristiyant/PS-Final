@@ -53,9 +53,17 @@ namespace UserLogin
                 return false;
             }
 
+            //Using LoggerContext to log in db.
+            LoggerContext context = new LoggerContext();
+            context.Logs.Add(new Logs("Успешен логин на " + user.Username));
+            context.SaveChanges();
+
+            //Using Logger to log activity in text file and in a list.
+            Logger.LogActivity("*Logger class* Успешен Login");
+
+            //Using MyCustomLogger library to log in
+            MyCustomLogger.Logger.LogActivity("*MyCustomLogger* Успешен логин на " + user.Username);
             CurrentUserRole = (UserRoles)LoggedUser.Role;
-            Logger.LogActivity("Успешен Login");
-            MyCustomLogger.Logger.LogActivity("Успешен логин на " + user.Username);
 
             return true;
         }

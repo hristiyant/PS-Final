@@ -1,6 +1,6 @@
 ﻿using System.Data.Entity;
 
-namespace StudentInfoSystem
+namespace StudentInfoSystem.Model
 {
     class StudentInfoContext : DbContext
     {

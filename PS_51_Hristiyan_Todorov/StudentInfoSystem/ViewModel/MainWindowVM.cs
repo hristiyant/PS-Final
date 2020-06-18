@@ -6,8 +6,9 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Windows.Forms;
+using StudentInfoSystem.Model;
 
-namespace StudentInfoSystem
+namespace StudentInfoSystem.ViewModel
 {
     public class MainWindowVM : DependencyObject, INotifyPropertyChanged
     {
