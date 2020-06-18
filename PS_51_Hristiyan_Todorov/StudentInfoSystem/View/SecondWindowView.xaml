@@ -5,16 +5,16 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:StudentInfoSystem"
         mc:Ignorable="d"
-        Title="Window2" Height="300" Width="300">
+        Title="SecondWindow" Height="300" Width="300">
     <Window.DataContext>
         <local:MainWindowVM />
     </Window.DataContext>
     <Grid>
         <ListBox
+            Height="200"
+            Width="200" 
             HorizontalAlignment="Center"
-            Height="100"
             VerticalAlignment="Center"
-            Width="100" 
             Name="lbStatuses"
             ItemsSource="{Binding StudStatusChoices}"/>
     </Grid>
